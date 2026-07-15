@@ -102,7 +102,7 @@ export const siteData: SiteData = {
       technologies: ["Python", "React", "API"],
       githubUrl: "https://github.com/Erem32/crypto-portfolio",
       liveDemoUrl: null,
-      featured: false,
+      featured: true,
     },
     {
       title: "Forkify",

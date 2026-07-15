@@ -1,4 +1,4 @@
-# Mateusz Majos Portfolio
+# MM Portfolio
 
 A clean MVP portfolio/resume website built with React, Vite, and Tailwind CSS.
 

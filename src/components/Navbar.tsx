@@ -1,34 +1,26 @@
 import { siteData } from "../data/siteData";
+import { Icon } from "./Icon";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <a
-          href="#home"
-          aria-label={`${siteData.profile.name} home`}
-          className="grid h-9 w-9 place-items-center rounded-md bg-slate-950 text-sm font-bold text-white"
-        >
-          MM
+    <header className="site-header">
+      <nav className="container nav" aria-label="Main navigation">
+        <a href="#home" className="wordmark">
+          <span className="monogram" aria-hidden="true">
+            mm<span>.</span>
+          </span>
+          <span className="wordmark-name">{siteData.profile.name}</span>
+          <span className="sr-only">home</span>
         </a>
-
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="nav-links">
           {siteData.navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-slate-600 transition hover:text-slate-950"
-            >
+            <a key={item.href} href={item.href}>
               {item.label}
             </a>
           ))}
         </div>
-
-        <a
-          href="#contact"
-          className="rounded-md bg-slate-950 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-800"
-        >
-          Contact
+        <a href="#contact" className="nav-contact">
+          Let&apos;s talk <Icon name="arrow-up-right" />
         </a>
       </nav>
     </header>

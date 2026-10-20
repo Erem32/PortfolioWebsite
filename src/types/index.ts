@@ -5,7 +5,10 @@ export type SkillCategory = {
 
 export type Project = {
   title: string;
+  category: string;
+  kind: string;
   description: string;
+  highlights: string[];
   technologies: string[];
   githubUrl: string;
   liveDemoUrl?: string | null;
@@ -20,6 +23,7 @@ export type TimelineItem = {
   period: string;
   location?: string;
   description: string;
+  highlights?: string[];
 };
 
 export type SiteData = {
@@ -27,6 +31,7 @@ export type SiteData = {
     name: string;
     title: string;
     intro: string;
+    aboutHeading: string;
     about: string[];
     focus: string[];
     email: string;

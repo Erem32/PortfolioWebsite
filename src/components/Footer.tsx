@@ -1,11 +1,16 @@
 import { siteData } from "../data/siteData";
+import { Icon } from "./Icon";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white py-6">
-      <div className="mx-auto flex max-w-6xl flex-col justify-between gap-3 px-4 text-sm text-slate-500 sm:flex-row sm:px-6 lg:px-8">
-        <p>(c) {new Date().getFullYear()} {siteData.profile.name}</p>
-        <p>{siteData.profile.location}</p>
+    <footer className="site-footer">
+      <div className="container footer-content">
+        <p>
+          &copy; {new Date().getFullYear()} {siteData.profile.name}
+        </p>
+        <a href="#home">
+          Back to top <Icon name="arrow-up-right" />
+        </a>
       </div>
     </footer>
   );

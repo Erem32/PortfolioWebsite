@@ -1,4 +1,6 @@
+import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
@@ -7,16 +9,21 @@ import { Skills } from "./components/Skills";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <>
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      <main>
+      <main id="main" tabIndex={-1}>
         <Hero />
         <Projects />
+        <Experience />
+        <About />
         <Skills />
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
